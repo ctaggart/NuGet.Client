@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28404.58
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BD1946CE-5544-4F28-A04A-9C3D51113E1A}"
 EndProject
@@ -229,6 +229,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateLicenseList", "test\TestExtensions\GenerateLicenseList\GenerateLicenseList.csproj", "{98A04824-9BCE-48BD-8544-916F3F0007D0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NuGet.Packaging.Core", "src\NuGet.Core\NuGet.Packaging.Core\NuGet.Packaging.Core.csproj", "{02B7C422-C592-4BA6-89A7-ACBD7923B34D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintContentHash", "PrintContentHash\PrintContentHash.csproj", "{D371EE5F-235F-459B-BCEC-95048450FDB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -556,6 +558,10 @@ Global
 		{02B7C422-C592-4BA6-89A7-ACBD7923B34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02B7C422-C592-4BA6-89A7-ACBD7923B34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02B7C422-C592-4BA6-89A7-ACBD7923B34D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D371EE5F-235F-459B-BCEC-95048450FDB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D371EE5F-235F-459B-BCEC-95048450FDB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D371EE5F-235F-459B-BCEC-95048450FDB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D371EE5F-235F-459B-BCEC-95048450FDB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
