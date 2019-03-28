@@ -10,17 +10,32 @@ namespace PrintContentHash
     {
         static void Main(string[] args)
         {
-            var id = "Microsoft.CSharp";
-            var version = NuGet.Versioning.NuGetVersion.Parse("4.0.1");
             var rootPath = Environment.CurrentDirectory;
+
+            // default args
             var nugetPath = Path.Combine(rootPath, "testpackages");
+            var id = "Microsoft.CSharp";
+            var version = "4.0.1";
+
+            // specify the nuget packages path
+            if (args.Length == 1) {
+                nugetPath = args[0];
+            }
+            else if (args.Length == 3)
+            {
+                nugetPath = args[0];
+                id = args[1];
+                version = args[2];
+            }
+
+            var nugetVersion = NuGet.Versioning.NuGetVersion.Parse(version);
             var pathResolver = new VersionFolderPathResolver(nugetPath);
 
             //var nupkgMetadataPath = pathResolver.GetNupkgMetadataPath(id, version);
             var nupkgMetadataPath = Path.Combine(rootPath, ".nupkg.metadata");
-            var hashPath = pathResolver.GetHashPath(id, version);
-            var zipPath = pathResolver.GetPackageFilePath(id, version);
-            var installPath = pathResolver.GetInstallPath(id, version);
+            var hashPath = pathResolver.GetHashPath(id, nugetVersion);
+            var zipPath = pathResolver.GetPackageFilePath(id, nugetVersion);
+            var installPath = pathResolver.GetInstallPath(id, nugetVersion);
 
             LocalFolderUtility.GenerateNupkgMetadataFile(zipPath, installPath, hashPath, nupkgMetadataPath);
 
